@@ -1,4 +1,4 @@
-package com.example.grades
+package com.example.grades;
 
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
