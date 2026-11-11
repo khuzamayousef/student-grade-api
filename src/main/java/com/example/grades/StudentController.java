@@ -1,10 +1,14 @@
 package com.example.grades;
 
 import org.springframework.web.bind.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.util.*;
 @RestController
 @RequestMapping("/api")
 public class StudentController {
+    private static final Logger logger =
+        LoggerFactory.getLogger(StudentController.class);
 private List<Student> students = new ArrayList<>(List.of(
 new Student(1L, "Ahmed", "SE4111", 95.0),
 new Student(2L, "Sara", "SE4111", 88.5)
@@ -25,5 +29,10 @@ public Student add(@RequestBody Student s) {
 s.setId((long) (students.size() + 1));
 students.add(s);
 return s;
+}
+@GetMapping("/health")
+public Map<String, String> health() {
+logger.info("Health check called");
+return Map.of("status", "UP");
 }
 }
