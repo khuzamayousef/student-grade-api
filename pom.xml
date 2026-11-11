@@ -10,12 +10,10 @@
 <artifactId>student-grade-api</artifactId>
 <version>1.0.0</version>
 <properties>
-<java.version>17</java.version>
-
-
-
-
-
+    <java.version>17</java.version>
+    <sonar.organization>khuzamayousef</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.projectKey>khuzamayousef_student-grade-api</sonar.projectKey>
 </properties>
 <dependencies>
 <dependency>
