@@ -9,10 +9,10 @@ build-test-scan-and-publish:
 runs-on: ubuntu-latest
 steps:
 # 1) Get the source code from the repo
-- name: Checkout repository
-uses: actions/checkout@v4
-with:
-fetch-depth: 0 # Sonar needs full history
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Sonar needs full history
 # 2) Install Java 17
 - name: Set up JDK 17
 uses: actions/setup-java@v4
