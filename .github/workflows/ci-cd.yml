@@ -33,8 +33,8 @@ jobs:
       # 4) Run SonarQube Cloud analysis
       - name: SonarQube Cloud scan
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn --batch-mode sonar:sonar
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn --batch-mode org.sonarsource.scanner.maven:sonar-maven-plugin:5.0.0.4389:sonar
 
       # 5) Log in to Docker Hub
       - name: Log in to Docker Hub
